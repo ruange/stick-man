@@ -2,9 +2,9 @@
 ----------
 　Last class,we have learn many knowledge about transformation.Now you need to complete the project II this week,I guess teacher has introduced the detail about this project,please create your stick man and let it move like a real man,I believe you can complete it perfectly.You can get the instruction from "No.5 Transformation" P63-82".
 
-　　　　　　　　　　　　　　　　![image](https://github.com/ruange/stick-man/blob/master/stickman.gif)
+　　　　　　　　　　　　　　![image](https://github.com/ruange/stick-man/blob/master/stickman.gif)
 ----------
-Name:阮宗明 　　　　　　　　 　　 ID:201400301080 　　　　　　　 　 Email:zongmingr@gmail.com
+Name:阮宗明 　　　　　　　　 　　 　　　ID:201400301080 　　　　　　　 　 　　Email:zongmingr@gmail.com
 ## Analysis:
 　　stickman是由一段一段的cubes组合起来的，首先先在草稿纸上画出模型，确定每一个cubes的长宽高，使stickman看起来不那么别扭。然后在opengl中使用glvertex3f(x,y,z)函数确定四个点，glBegin(GL_QUADS)函数将使这四个点画出一个面，将长方体的6个面依次画出组成一个长方体，注意这些长方体都是在自己的坐标系画出的。接下来的问题是将这些长方体叠起来，叠起来需要有个层次，opengl中有个矩阵栈，存储的是坐标系变换的矩阵，glPushMatrix()将矩阵入栈，glPopMatrix()将矩阵出栈。栈底部的矩阵（坐标系）所做的变换都会影响栈上部的矩阵（坐标系）。
 
