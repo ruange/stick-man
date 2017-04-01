@@ -2,7 +2,7 @@
 ----------
 　Last class,we have learn many knowledge about transformation.Now you need to complete the project II this week,I guess teacher has introduced the detail about this project,please create your stick man and let it move like a real man,I believe you can complete it perfectly.You can get the instruction from "No.5 Transformation" P63-82".
 
-　　　　　　　　　　　　　　![image](https://github.com/ruange/stick-man/blob/master/stickman.gif)
+　　　　　　　　　　　![image](https://github.com/ruange/stick-man/blob/master/stickman.gif)
 ----------
 Name:阮宗明 　　　　　　　　 　　 　　　ID:201400301080 　　　　　　　 　 　　Email:zongmingr@gmail.com
 ## Analysis:
@@ -14,3 +14,9 @@ Name:阮宗明 　　　　　　　　 　　 　　　ID:201400301080 　　�
 
 　　虽然stickman已画出，但还不会动，要使stickman走动起来，需要手脚摆动起来，并且手上下臂摆动角度幅度不同，大小腿摆动的幅度也不一样。下臂的摆动要在上臂摆动的基础上，小腿的摆动要在大腿的基础上，这样才不会散架。实现这个很简单，只需要在 D1 点push之前进行一个glRotatef(angle1,x,y,z)操作即可，意思就是上臂绕着某一个轴旋转一个角度angle，那么push后下臂也会跟着上臂旋转一个angle角度，如果下臂有自己的旋转角度，只需在pop之前glRotate(angle2,x,y,z)即可。其他同理。为了使整个stickman看起来像走路，将最顶层的坐标系进行glTranslatef(x,y,z)操作。每次画完后都要改变angle等的值，再重画。angle值的变化是一个周期。
 ## Demo ##
+- Stick man go straight:
+
+　　![image](https://github.com/ruange/stick-man/blob/master/straight.gif)
+
+- Stick man spin in circles:
+![image](https://github.com/ruange/stick-man/blob/master/spin.gif)
